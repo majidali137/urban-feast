@@ -16,28 +16,9 @@ import {
   Mail,
   Quote,
 } from "lucide-react";
+import Slider from "@/components/Home/Slider";
 
-// Hero slider data
-const heroSlides = [
-  {
-    id: 1,
-    image: "/elegant-restaurant-interior-with-warm-lighting-and.jpg",
-    title: "Exquisite Dining Experience",
-    subtitle: "Where culinary artistry meets elegant ambiance",
-  },
-  {
-    id: 2,
-    image: "/gourmet-dish-presentation-with-golden-lighting.jpg",
-    title: "Culinary Masterpieces",
-    subtitle: "Crafted by award-winning chefs",
-  },
-  {
-    id: 3,
-    image: "/restaurant-bar-with-golden-lighting-and-premium-at.jpg",
-    title: "Premium Bar Experience",
-    subtitle: "Curated wines and signature cocktails",
-  },
-];
+
 
 // Statistics data
 const stats = [
@@ -118,125 +99,21 @@ const galleryImages = [
 ];
 
 export default function HomePage() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  // Auto-advance hero slider
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  // Auto-advance testimonials
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const nextSlide = () =>
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  const prevSlide = () =>
-    setCurrentSlide(
-      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
-    );
+ // Auto-advance testimonials
+       useEffect(() => {
+         const timer = setInterval(() => {
+           setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+         }, 4000);
+         return () => clearInterval(timer);
+       }, []);
 
   return (
     <div className="min-h-screen">
 
-      <section className="relative h-screen overflow-hidden">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0"
-          >
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${heroSlides[currentSlide].image})`,
-              }}
-            />
-            <div className="absolute inset-0 bg-black/50" />
-          </motion.div>
-        </AnimatePresence>
-
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="text-center space-y-6 max-w-4xl mx-auto px-4">
-            <motion.h1
-              key={`title-${currentSlide}`}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold text-white"
-            >
-              {heroSlides[currentSlide].title}
-            </motion.h1>
-
-            <motion.p
-              key={`subtitle-${currentSlide}`}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto"
-            >
-              {heroSlides[currentSlide].subtitle}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-              <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link href="/reservation">Reserve Your Table</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="text-lg px-8 py-6 bg-white/10 border-white/20 text-white hover:bg-white/20"
-              >
-                <Link href="/menu">View Our Menu</Link>
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Slider Controls */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
-        >
-          <ChevronLeft className="w-6 h-6 text-white" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
-        >
-          <ChevronRight className="w-6 h-6 text-white" />
-        </button>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? "bg-primary" : "bg-white/50"
-              }`}
-            />
-          ))}
-        </div>
-      </section>
+ <Slider/>
 
       <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -381,7 +258,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 bg-card">
+      {/* <section className="py-20 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -460,7 +337,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -577,7 +454,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      
+
     </div>
   );
 }
