@@ -56,3 +56,44 @@ export const featuredItems = [
     category: "Dessert",
   },
 ];
+
+// Gallery images
+export const galleryImages = [
+  "/restaurant-interior-elegant-dining-room.jpg",
+  "/gourmet-food-plating-artistic-presentation.jpg",
+  "/restaurant-bar-area-with-golden-lighting.jpg",
+  "/chef-preparing-food-in-open-kitchen.jpg",
+  "/premium-wine-cellar.png",
+  "/outdoor-restaurant-terrace-evening-ambiance.jpg",
+];
+
+// Testimonials data
+export const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    role: "Food Critic",
+    content:
+      "Urban Feast delivers an unparalleled dining experience. Every dish is a masterpiece that tells a story.",
+    rating: 5,
+    image: "/professional-woman-food-critic-headshot.jpg",
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    role: "Regular Customer",
+    content:
+      "The attention to detail and exceptional service make every visit memorable. Truly world-class.",
+    rating: 5,
+    image: "/professional-man-customer-headshot.jpg",
+  },
+  {
+    id: 3,
+    name: "Emma Rodriguez",
+    role: "Event Planner",
+    content:
+      "Perfect venue for special occasions. The ambiance and cuisine exceeded all expectations.",
+    rating: 5,
+    image: "/professional-woman-event-planner-headshot.jpg",
+  },
+];
