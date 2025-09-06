@@ -27,3 +27,32 @@ export const stats = [
   { number: 500, label: "Daily Orders", suffix: "+" },
   { number: 8, label: "Locations", suffix: "" },
 ];
+
+// Featured menu items
+export const featuredItems = [
+  {
+    id: 1,
+    name: "Wagyu Beef Tenderloin",
+    description:
+      "Premium wagyu beef with truffle sauce and seasonal vegetables",
+    price: 85,
+    image: "/wagyu-beef-tenderloin-with-truffle-sauce-elegant-p.jpg",
+    category: "Main Course",
+  },
+  {
+    id: 2,
+    name: "Pan-Seared Lobster",
+    description: "Fresh Atlantic lobster with saffron risotto and microgreens",
+    price: 72,
+    image: "/pan-seared-lobster-with-saffron-risotto-fine-dinin.jpg",
+    category: "Seafood",
+  },
+  {
+    id: 3,
+    name: "Chocolate Soufflé",
+    description: "Decadent dark chocolate soufflé with vanilla bean ice cream",
+    price: 28,
+    image: "/chocolate-souffle-with-vanilla-ice-cream-elegant-d.jpg",
+    category: "Dessert",
+  },
+];
