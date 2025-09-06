@@ -6,7 +6,8 @@ import Featured from "@/components/Home/Featured";
 import Experience from "@/components/Home/Experience";
 import CTA from "@/components/Home/CTA";
 import Testimonials from "@/components/Home/Testimonials";
-import VistLocation from "@/components/Home/vistLocation";
+import VistLocation from "@/components/Home/VistLocation";
+
 
 export default function HomePage() {
   return (
