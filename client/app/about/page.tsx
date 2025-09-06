@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Heart, Target, Star, Calendar } from "lucide-react";
+import HeroSection from "@/components/Shared/HeroSection";
 
 const chefs = [
   {
@@ -90,34 +91,12 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url(/public/elegant-restaurant-interior-with-warm-lighting-and.jpg)",
-          }}
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-center space-y-6 max-w-4xl mx-auto px-4">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold text-white"
-          >
-            Our <span className="text-primary">Story</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto"
-          >
-            A journey of culinary passion spanning over two decades
-          </motion.p>
-        </div>
-      </section>
+      <HeroSection
+        backgroundImage="/about-hero.jpg"
+        title="Our"
+        highlight="Story"
+        description="A journey of culinary passion spanning over two decades"
+      />
 
       {/* Restaurant Story */}
       <section className="py-20 bg-background">
