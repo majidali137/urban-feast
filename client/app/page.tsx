@@ -146,6 +146,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+
       <section className="relative h-screen overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
@@ -575,6 +576,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      
     </div>
   );
 }
