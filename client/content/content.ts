@@ -97,3 +97,34 @@ export const testimonials = [
     image: "/professional-woman-event-planner-headshot.jpg",
   },
 ];
+
+
+export const chefs = [
+  {
+    id: 1,
+    name: "Chef Marcus Rodriguez",
+    title: "Executive Chef & Owner",
+    image: "/chef-1.jpg",
+    description:
+      "With over 20 years of culinary excellence, Chef Marcus brings innovative techniques and passion to every dish.",
+    specialties: ["Modern European", "Molecular ", "Wine Pairing"],
+  },
+  {
+    id: 2,
+    name: "Chef Isabella Chen",
+    title: "Pastry Chef",
+    image: "/chef-2.jpg",
+    description:
+      "Award-winning pastry chef known for her artistic dessert presentations and innovative flavor combinations.",
+    specialties: ["French Pastry", "Chocolate Art", "Seasonal Desserts"],
+  },
+  {
+    id: 3,
+    name: "Chef Antonio Silva",
+    title: "Sous Chef",
+    image: "/chef-3.jpg",
+    description:
+      "Bringing authentic Mediterranean flavors with a modern twist, Chef Antonio ensures every plate is perfection.",
+    specialties: ["Mediterranean", "Seafood", "Grilled Specialties"],
+  },
+];
