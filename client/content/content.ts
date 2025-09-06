@@ -128,3 +128,27 @@ export const chefs = [
     specialties: ["Mediterranean", "Seafood", "Grilled Specialties"],
   },
 ];
+
+
+export const awards = [
+  {
+    year: "2024",
+    title: "Michelin Star",
+    description: "Awarded for exceptional cuisine and service excellence",
+  },
+  {
+    year: "2023",
+    title: "Best Fine Dining Restaurant",
+    description: "City's Choice Awards - Voted by local food critics",
+  },
+  {
+    year: "2023",
+    title: "Wine Spectator Award",
+    description: "Excellence in wine selection and sommelier service",
+  },
+  {
+    year: "2022",
+    title: "James Beard Nomination",
+    description: "Outstanding Restaurant Design and Atmosphere",
+  },
+];
