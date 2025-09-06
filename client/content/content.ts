@@ -19,3 +19,11 @@ export const heroSlides = [
     subtitle: "Curated wines and signature cocktails",
   },
 ];
+
+// Statistics data
+export const stats = [
+  { number: 25, label: "Years of Excellence", suffix: "+" },
+  { number: 50000, label: "Happy Customers", suffix: "+" },
+  { number: 500, label: "Daily Orders", suffix: "+" },
+  { number: 8, label: "Locations", suffix: "" },
+];

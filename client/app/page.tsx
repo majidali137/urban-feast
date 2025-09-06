@@ -17,16 +17,7 @@ import {
   Quote,
 } from "lucide-react";
 import Slider from "@/components/Home/Slider";
-
-
-
-// Statistics data
-const stats = [
-  { number: 25, label: "Years of Excellence", suffix: "+" },
-  { number: 50000, label: "Happy Customers", suffix: "+" },
-  { number: 500, label: "Daily Orders", suffix: "+" },
-  { number: 8, label: "Locations", suffix: "" },
-];
+import Stats from "@/components/Home/Stats";
 
 // Featured menu items
 const featuredItems = [
@@ -99,53 +90,21 @@ const galleryImages = [
 ];
 
 export default function HomePage() {
-  
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
- // Auto-advance testimonials
-       useEffect(() => {
-         const timer = setInterval(() => {
-           setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-         }, 4000);
-         return () => clearInterval(timer);
-       }, []);
+  // Auto-advance testimonials
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="min-h-screen">
+      <Slider />
 
- <Slider/>
-
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                  <motion.span
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: index * 0.1 + 0.3 }}
-                    viewport={{ once: true }}
-                  >
-                    {stat.number.toLocaleString()}
-                    {stat.suffix}
-                  </motion.span>
-                </div>
-                <p className="text-muted-foreground font-medium">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Stats />
 
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -453,8 +412,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-
     </div>
   );
 }
