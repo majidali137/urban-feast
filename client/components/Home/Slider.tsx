@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-const SWIPE_THRESHOLD = 50; // px
+const SWIPE_THRESHOLD = 50; 
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
