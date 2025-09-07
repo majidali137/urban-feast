@@ -9,6 +9,7 @@ import { Users, Calendar, Phone, Mail, Camera, Play } from "lucide-react";
 import Link from "next/link";
 import HeroSection from "@/components/Shared/HeroSection";
 import Gallery from "@/components/Venue/Gallery";
+import VirtualTour from "@/components/Venue/VirtualTour";
 
 const eventTypes = [
   {
@@ -67,56 +68,8 @@ export default function VenuePage() {
         highlight="Venue"
         description="Culinary masterpieces crafted with passion and precision"
       />
-      {/* Photo Gallery */}
-
       <Gallery />
-      {/* Virtual Tour */}
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-                Virtual <span className="text-primary">Tour</span>
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Take a 360-degree virtual tour of our restaurant and experience
-                our elegant atmosphere from the comfort of your home. Explore
-                our dining rooms, bar area, and private event spaces.
-              </p>
-              <Button size="lg" className="text-lg px-8 py-6">
-                <Play className="w-5 h-5 mr-2" />
-                Start Virtual Tour
-              </Button>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="aspect-video rounded-lg overflow-hidden bg-muted relative group cursor-pointer">
-                <img
-                  src="/public/restaurant-interior-elegant-dining-room.jpg"
-                  alt="Virtual tour preview"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                  <div className="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center">
-                    <Play className="w-8 h-8 text-white ml-1" />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <VirtualTour />
 
       {/* Event Hosting */}
       <section className="py-20 bg-background">
