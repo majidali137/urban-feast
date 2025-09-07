@@ -32,19 +32,19 @@ export const stats = [
 export const featuredItems = [
   {
     id: 1,
-    name: "Wagyu Beef Tenderloin",
+    name: "Mutton Masala",
     description:
       "Premium wagyu beef with truffle sauce and seasonal vegetables",
     price: 85,
-    image: "/wagyu-beef-tenderloin-with-truffle-sauce-elegant-p.jpg",
+    image: "/f1.jpg",
     category: "Main Course",
   },
   {
     id: 2,
-    name: "Pan-Seared Lobster",
+    name: "chiken tikka",
     description: "Fresh Atlantic lobster with saffron risotto and microgreens",
     price: 72,
-    image: "/pan-seared-lobster-with-saffron-risotto-fine-dinin.jpg",
+    image: "/f7.jpg",
     category: "Seafood",
   },
   {
