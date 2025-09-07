@@ -15,12 +15,10 @@ import {
   Phone,
   Mail,
   Clock,
-  Facebook,
-  Instagram,
-  Twitter,
   Send,
   CheckCircle,
 } from "lucide-react";
+import HeroSection from "@/components/Shared/HeroSection";
 
 const contactInfo = [
   {
@@ -47,22 +45,6 @@ const contactInfo = [
       "Sun: 4:00 PM - 9:00 PM",
     ],
   },
-];
-
-const socialLinks = [
-  {
-    icon: Facebook,
-    href: "#",
-    label: "Facebook",
-    color: "hover:text-blue-500",
-  },
-  {
-    icon: Instagram,
-    href: "#",
-    label: "Instagram",
-    color: "hover:text-pink-500",
-  },
-  { icon: Twitter, href: "#", label: "Twitter", color: "hover:text-blue-400" },
 ];
 
 export default function ContactPage() {
@@ -106,35 +88,13 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url(/public/restaurant-location-map-view-with-elegant-building.jpg)",
-          }}
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-center space-y-6 max-w-4xl mx-auto px-4">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold text-white"
-          >
-            Contact <span className="text-primary">Us</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto"
-          >
-            We'd love to hear from you. Get in touch with us today.
-          </motion.p>
-        </div>
-      </section>
 
+      <HeroSection
+        backgroundImage="/Contact.jpeg"
+        title="Contact"
+        highlight="Us"
+        description=" We'd love to hear from you. Get in touch with us today."
+      />
       {/* Contact Information */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -309,39 +269,17 @@ export default function ContactPage() {
               className="space-y-6"
             >
               <div className="aspect-square rounded-lg overflow-hidden bg-muted">
-                <img
-                  src="/public/restaurant-location-map-view-with-elegant-building.jpg"
-                  alt="Restaurant location map"
-                  className="w-full h-full object-cover"
-                />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.3155235026313!2d67.00113657536745!3d24.860734046919604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e9c5b2f6c9b%3A0x123456789abcdef!2sYour%20Restaurant!5e0!3m2!1sen!2s!4v1694200000000!5m2!1sen!2s"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg"
+                ></iframe>
               </div>
-
-              {/* Social Media */}
-              <Card className="p-6">
-                <CardContent className="p-0">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">
-                    Follow Us
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    Stay connected with us on social media for the latest
-                    updates, special offers, and behind-the-scenes content.
-                  </p>
-                  <div className="flex space-x-4">
-                    {socialLinks.map((social) => (
-                      <motion.a
-                        key={social.label}
-                        href={social.href}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        className={`w-12 h-12 bg-muted rounded-full flex items-center justify-center text-muted-foreground transition-colors duration-200 ${social.color}`}
-                        aria-label={social.label}
-                      >
-                        <social.icon className="w-6 h-6" />
-                      </motion.a>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
             </motion.div>
           </div>
         </div>
