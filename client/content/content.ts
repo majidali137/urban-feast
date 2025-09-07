@@ -152,3 +152,151 @@ export const awards = [
     description: "Outstanding Restaurant Design and Atmosphere",
   },
 ];
+
+
+export const menuItems = [
+  // Starters
+  {
+    id: 1,
+    name: " Chicken Tikka Kabab",
+    description:
+      "Deliciously Spiced Chicken Tikka Kabab, A Flavourful Grilled Delight with Tangy Marinade and Smoky Charcoal Aroma Serve with Mint and Tomato Chutney. Selective focus.",
+    price: 18,
+    category: "Mains",
+    image: "/f1.jpg",
+    dietary: ["Vegetarian"],
+    popular: true,
+  },
+  {
+    id: 2,
+    name: "Seared Scallops",
+    description:
+      "Pan-seared scallops with cauliflower purée and pancetta crisps",
+    price: 24,
+    category: "Mains",
+    image: "/f2.jpg",
+    dietary: ["Gluten-Free"],
+    popular: false,
+  },
+  {
+    id: 3,
+    name: "Burrata Caprese",
+    description:
+      "Fresh burrata with heirloom tomatoes, basil oil, and aged balsamic",
+    price: 16,
+    category: "Mains",
+    image: "/f3.jpg",
+    dietary: ["Vegetarian", "Gluten-Free"],
+    popular: true,
+  },
+
+  // Mains
+  {
+    id: 4,
+    name: "Wagyu Beef Tenderloin",
+    description:
+      "Premium wagyu beef with truffle sauce and seasonal vegetables",
+    price: 85,
+    category: "Starters",
+    image: "/f4.jpg",
+    dietary: ["Gluten-Free"],
+    popular: true,
+  },
+  {
+    id: 5,
+    name: "Pan-Seared Lobster",
+    description: "Fresh Atlantic lobster with saffron risotto and microgreens",
+    price: 72,
+    category: "Starters",
+    image: "/f5.jpg",
+    dietary: ["Gluten-Free"],
+    popular: true,
+  },
+  {
+    id: 6,
+    name: "Duck Confit",
+    description:
+      "Slow-cooked duck leg with cherry gastrique and roasted vegetables",
+    price: 38,
+    category: "Starters",
+    image: "/f6.jpg",
+    dietary: ["Gluten-Free"],
+    popular: false,
+  },
+  {
+    id: 7,
+    name: "Vegetarian Tasting",
+    description:
+      "Chef's selection of seasonal vegetables with quinoa and herb sauce",
+    price: 32,
+    category: "Mains",
+    image: "/f7.jpg",
+    dietary: ["Vegetarian", "Vegan", "Gluten-Free"],
+    popular: false,
+  },
+
+  // Desserts
+  {
+    id: 8,
+    name: "Chocolate Soufflé",
+    description: "Decadent dark chocolate soufflé with vanilla bean ice cream",
+    price: 28,
+    category: "Desserts",
+    image: "/f8.jpg",
+    dietary: ["Vegetarian"],
+    popular: true,
+  },
+  {
+    id: 9,
+    name: "Lemon Tart",
+    description: "Classic lemon tart with meringue and fresh berries",
+    price: 16,
+    category: "Desserts",
+    image: "/f9.jpg",
+    dietary: ["Vegetarian"],
+    popular: false,
+  },
+  {
+    id: 10,
+    name: "Tiramisu",
+    description: "Traditional Italian tiramisu with espresso and mascarpone",
+    price: 14,
+    category: "Desserts",
+    image: "/f10.jpg",
+    dietary: ["Vegetarian"],
+    popular: true,
+  },
+
+  // Beverages
+  {
+    id: 11,
+    name: "Sommelier's Selection",
+    description: "Curated wine pairing for your meal (per glass)",
+    price: 18,
+    category: "Beverages",
+    image: "/f11.jpg",
+    dietary: [],
+    popular: true,
+  },
+  {
+    id: 12,
+    name: "Craft Cocktails",
+    description:
+      "House-made cocktails with premium spirits and fresh ingredients",
+    price: 16,
+    category: "Beverages",
+    image: "/f12.jpg",
+    dietary: [],
+    popular: false,
+  },
+  {
+    id: 13,
+    name: "Artisan Coffee",
+    description: "Single-origin coffee beans, expertly roasted and brewed",
+    price: 6,
+    category: "Beverages",
+    image: "/f13.jpg",
+    dietary: ["Vegan"],
+    popular: false,
+  },
+];
