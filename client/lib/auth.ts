@@ -17,7 +17,7 @@ export interface AuthState {
 const mockUsers: User[] = [
   {
     id: "1",
-    email: "admin@Urban Feast.com",
+    email: "admin@Urbanfeast.com",
     name: "Admin User",
     role: "admin",
     avatar: "/placeholder.svg?key=admin",

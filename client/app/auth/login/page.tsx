@@ -151,7 +151,7 @@ export default function LoginPage() {
 
               <div className="text-sm text-muted-foreground space-y-1">
                 <p>
-                  <strong>Admin:</strong> admin@Urban Feast.com / password123
+                  <strong>Admin:</strong> admin@Urbanfeast.com / password123
                 </p>
                 <p>
                   <strong>User:</strong> user@example.com / password123
