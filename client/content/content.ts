@@ -335,3 +335,52 @@ export const vanueImages = [
     category: "Private Dining",
   },
 ];
+
+
+export const eventTypes = [
+  {
+    id: 1,
+    title: "Wedding Celebrations",
+    description:
+      "Create unforgettable memories with our elegant wedding packages",
+    capacity: "50-200 guests",
+    features: [
+      "Custom menu design",
+      "Dedicated event coordinator",
+      "Floral arrangements",
+      "Photography services",
+    ],
+    image: "/Wedding-Celebrations.jpg",
+    price: "Starting from $150/person",
+  },
+  {
+    id: 2,
+    title: "Corporate Events",
+    description:
+      "Professional venues for business meetings and corporate gatherings",
+    capacity: "20-100 guests",
+    features: [
+      "AV equipment",
+      "Business lunch menus",
+      "Private meeting rooms",
+      "Catering services",
+    ],
+    image: "/Corporate-Events.jpg",
+    price: "Starting from $75/person",
+  },
+  {
+    id: 3,
+    title: "Private Parties",
+    description:
+      "Intimate celebrations for birthdays, anniversaries, and special occasions",
+    capacity: "10-50 guests",
+    features: [
+      "Personalized menus",
+      "Flexible seating",
+      "Custom decorations",
+      "Private bar service",
+    ],
+    image: "/Private-Parties.jpg",
+    price: "Starting from $100/person",
+  },
+];
