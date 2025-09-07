@@ -300,3 +300,38 @@ export const menuItems = [
     popular: false,
   },
 ];
+
+
+export const vanueImages = [
+  {
+    id: 1,
+    src: "/Interior.jpg",
+    alt: "Main dining room",
+    category: "Interior",
+  },
+  {
+    id: 2,
+    src: "/Bar.jpg",
+    alt: "Premium bar area",
+    category: "Bar",
+  },
+  {
+    id: 3,
+    src: "/Exterior.jpg",
+    alt: "Outdoor terrace",
+    category: "Exterior",
+  },
+
+  {
+    id: 4,
+    src: "/Kitchen.jpg",
+    alt: "Open kitchen",
+    category: "Kitchen",
+  },
+  {
+    id: 5,
+    src: "/Private-Dining.webp",
+    alt: "Private dining room",
+    category: "Private Dining",
+  },
+];
