@@ -1,11 +1,9 @@
-# alembic/env.py
 from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool
 from alembic import context
 
-# import your Base
 from app.database import Base
-from app import models  # ensures models are registered
+from app.models import *  # 👈 this will import all models
 
 config = context.config
 
@@ -37,7 +35,9 @@ def run_migrations_online() -> None:
 
     with connectable.connect() as connection:
         context.configure(
-            connection=connection, target_metadata=target_metadata
+            connection=connection,
+            target_metadata=target_metadata,
+            compare_type=True,   # 👈 makes autogenerate detect type changes
         )
 
         with context.begin_transaction():
